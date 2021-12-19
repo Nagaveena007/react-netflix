@@ -6,16 +6,20 @@ const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&`;
 
 const fetchMovieByTitle = async (title) => {
   try {
-    // search movie
     const res = await fetch(`${BASE_URL}s=${title}`);
     const data = await res.json();
-    // return search result as array
     return data.Search;
   } catch (error) {
     console.log(error);
   }
 };
-const moviesToFetch = ["Batman", "Spiderman", "Hulk", "Iron Man", "Pirate"];
+const moviesToFetch = [
+  "Harry potter",
+  "Lord of the rings",
+  "Hulk",
+  "Iron Man",
+  "Pirates of caribbean",
+];
 
 class MovieList extends Component {
   state = {
@@ -37,7 +41,7 @@ class MovieList extends Component {
     return (
       <>
         {this.state.movies.map((arrayOfMovies) => (
-          <SingleMovie movies={arrayOfMovies} />
+          <SingleMovie movies={arrayOfMovies} title={moviesToFetch} />
         ))}
       </>
     );

@@ -4,8 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyNav from "./components/MyNav/MyNav";
 import Home from "./components/Home/Home";
 import FooterPart from "./components/Footer/FooterPart";
-import CommentArea from "./components/SingleMoovie/CommentArea";
-import SingleMovie from "./components/SingleMoovie/SingleMovie";
 import MovieList from "./components/SingleMoovie/MovieList";
 
 function App() {
@@ -13,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <MyNav />
-      <Home />
+     {/*  <Home /> */}
 
       <MovieList />
       <FooterPart />
